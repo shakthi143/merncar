@@ -1,0 +1,225 @@
+@use postcss-preset-env {
+    stage: 0;
+}
+
+:root {
+    --color-background: #1a1a2e;
+    --color-primary: #0f3460;
+    --color-secondary: #e94560;
+    --color-accent: #0be881;
+    --font-family-base: 'Poppins', sans-serif;
+    --font-size-h1: 2rem;
+    --font-size-h2: 1.5rem;
+    --box-shadow: 0 0 20px rgba(233, 69, 96, 0.7), 0 0 30px rgba(233, 69, 96, 0.5);
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+/* Scoped styles for the specific component or page */
+.payment-page {
+    /* background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%); */
+    display: grid;
+    font-family: var(--font-family-base);
+    line-height: 1.5;
+    margin: 0;
+    min-height: 100vh;
+    padding: 5vmin;
+    place-items: center;
+    color: #fff;
+    margin-top: 11rem;
+}
+
+.payment-page address {
+    font-style: normal;
+}
+
+.payment-page button {
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+}
+
+.payment-page fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.payment-page h1 {
+    font-size: var(--font-size-h1);
+    line-height: 1.2;
+    margin: 0 0 1.5em;
+    color: var(--color-secondary);
+    text-shadow: 0 0 15px var(--color-secondary);
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+.payment-page h2 {
+    font-size: var(--font-size-h2);
+    line-height: 1.2;
+    margin: 0 0 0.5em;
+    color: var(--color-secondary);
+    text-shadow: 0 0 15px var(--color-secondary);
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+.payment-page legend {
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    padding: 0;
+    color: var(--color-accent);
+    text-shadow: 0 0 10px var(--color-accent);
+}
+
+.payment-page input {
+    border: 0;
+    color: inherit;
+    font: inherit;
+    background-color: #1a1a2e;
+    color: #fff;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    box-shadow: var(--box-shadow);
+}
+
+.payment-page input[type="radio"] {
+    accent-color: var(--color-secondary);
+}
+
+.payment-page table {
+    border-collapse: collapse;
+    width: 100%;
+    color: #fff;
+}
+
+.payment-page tbody {
+    color: #b4b4b4;
+}
+
+.payment-page td {
+    padding: 0.125em 0;
+}
+
+.payment-page tfoot {
+    border-top: 1px solid #b4b4b4;
+    font-weight: 600;
+}
+
+.payment-page .align {
+    display: grid;
+    place-items: center;
+}
+
+.payment-page .button {
+    align-items: center;
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+    border-radius: 999em;
+    color: #fff;
+    display: flex;
+    gap: 0.5em;
+    justify-content: center;
+    padding: 0.75em 1em;
+    transition: 0.3s;
+    box-shadow: var(--box-shadow);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.payment-page .button:focus,
+.payment-page .button:hover {
+    background: linear-gradient(135deg, #e94560cc 0%, #0be881cc 100%);
+}
+
+.payment-page .button--full {
+    width: 100%;
+}
+
+.payment-page .card {
+    border-radius: 1em;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: #fff;
+    padding: 1em;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+    backdrop-filter: blur(10px);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+}
+
+.payment-page .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(233, 69, 96, 0.9), 0 0 40px rgba(233, 69, 96, 0.7);
+}
+
+.payment-page .form {
+    display: grid;
+    gap: 2em;
+}
+
+.payment-page .form__radios {
+    display: grid;
+    gap: 1em;
+}
+
+.payment-page .form__radio {
+    align-items: center;
+    background-color: #1a1a2e;
+    border-radius: 1em;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    padding: 1em;
+    backdrop-filter: blur(10px);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+}
+
+.payment-page .form__radio label {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    gap: 1em;
+    color: #fff;
+}
+
+.payment-page .header {
+    display: flex;
+    justify-content: center;
+    padding: 0.5em 1em;
+}
+
+.payment-page .icon {
+    height: 1em;
+    display: inline-block;
+    fill: currentColor;
+    width: 1em;
+    vertical-align: middle;
+}
+
+.payment-page .iphone {
+    background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%);
+    border-radius: 2em;
+    height: 899px;
+    box-shadow: var(--box-shadow);
+    width: 800px; /* Increased width for a more prominent look */
+    overflow: auto;
+    padding: 2em;
+    transition: transform 0.3s, box-shadow 0.3s;
+    backdrop-filter: blur(15px);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+}
+
+.payment-page .iphone:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(233, 69, 96, 0.9), 0 0 40px rgba(233, 69, 96, 0.7);
+}
+
+@keyframes neon {
+    from {
+        text-shadow: 0 0 15px var(--color-secondary), 0 0 20px var(--color-secondary), 0 0 30px var(--color-secondary);
+    }
+    to {
+        text-shadow: 0 0 20px var(--color-secondary), 0 0 30px var(--color-secondary), 0 0 40px var(--color-secondary);
+    }
+}

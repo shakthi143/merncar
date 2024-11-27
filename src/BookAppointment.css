@@ -1,0 +1,344 @@
+
+.appointment-wrapper {
+  background-image: url("https://rare-gallery.com/uploads/posts/542239-lamborghini.jpg");
+  padding: 2rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.appointment-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 6rem;
+  width: 900px;
+  background: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(30px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  color: black;
+  border-radius: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-size: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+ 
+}
+
+/* Dark overlay for better readability */
+.appointment-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); 
+  z-index: 1;
+}
+
+.appointment-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+}
+
+.appointment-form {
+  position: relative;
+  z-index: 2;
+}
+
+.appointment-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.appointment-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #e03131;
+}
+
+.appointment-form input,
+.appointment-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ffffff;
+  border-width: 5px;
+  border-radius: 5px;
+  background-color: #d7c6c6;
+}
+
+.appointment-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #ec0a1c, #b00816);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #b00816, #ec0a1c);
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 1024px) {
+  .appointment-container {
+    padding: 4rem;
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .appointment-container {
+    padding: 2rem;
+  }
+
+  .appointment-container h2 {
+    font-size: 2rem;
+  }
+
+  .appointment-form input,
+  .appointment-form textarea {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .submit-btn {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+}
+
+
+/* Container for CRUD operations */
+.crud-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.crud-card {
+  width: 90%;
+  max-width: 600px;
+  background: #333; 
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  color: #fff; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.crud-card:hover {
+  transform: scale(1.02); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.crud-card h2 {
+  font-size: 1.8rem;
+  color: #fff; 
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.crud-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.crud-card .form-group {
+  margin-bottom: 15px;
+}
+
+.crud-card .form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fff; 
+}
+
+.crud-card .form-group input,
+.crud-card .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #555; 
+  border-radius: 8px;
+  background: #444; 
+  color: #fff;
+}
+
+.crud-card .form-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.crud-card .submit-btn {
+  background-color: #dc3545; 
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.crud-card .submit-btn:hover {
+  background-color: #c82333; 
+  transform: scale(1.05); 
+}
+
+
+.crud-card .notification {
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.crud-card .notification.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.crud-card .notification.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.crud-card .notification.show {
+  display: block;
+}
+
+/* Card list for displaying existing appointments */
+.appointments-list {
+  width: 90%;
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+.appointments-list h3 {
+  font-size: 1.5rem;
+  color: #fff; /* White heading color */
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.appointments-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.appointments-list li {
+  background: #555; /* Gray background */
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff; /* White text */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.appointments-list li:hover {
+  transform: scale(1.02); /* Slightly enlarge on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.appointments-list button {
+  background: #dc3545; /* Red background */
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.appointments-list button:hover {
+  background: #c82333; 
+  transform: scale(1.05); 
+}
+
+.appointments-list button.edit {
+  background: #007bff; 
+}
+
+.appointments-list button.edit:hover {
+  background: #0056b3; 
+}
+
+@media (max-width: 480px) {
+  .appointment-container {
+    padding: 1rem;
+  }
+
+  .appointment-container h2 {
+    font-size: 1.75rem;
+  }
+
+  .appointment-form .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .appointment-form input,
+  .appointment-form textarea {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .submit-btn {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+
+.notification {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #bf0d0d;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.notification.show {
+  opacity: 1;
+}
+
+.notification.error {
+  background-color: #f44336;
+}
+

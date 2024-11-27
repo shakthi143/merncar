@@ -1,0 +1,184 @@
+
+.repair-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin-top: 10em;
+    position:relative;
+    min-height: 100vh;
+}
+
+.repair-header {
+    margin-bottom: 50px;
+}
+
+.repair-header h1 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.5em;
+    color: black;
+}
+
+.repair-header p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2em;
+    color: #ccc;
+}
+
+.repair-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.repair-card {
+  background-color: #222;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  margin: 20px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #fff;
+  background-image: url('https://img.freepik.com/premium-photo/various-car-parts-accessories-grey-background-3d-illustration_771335-36233.jpg');
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: center;
+}
+
+
+.repair-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.repair-icon {
+  
+    font-size: 3em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.repair-card h2 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5em;
+    color: #fff;
+    margin-bottom: 100px;
+    
+}
+
+
+.repair-card p {
+    font-size: 1em;
+    color: #aaa;
+}
+h1.heading {
+    font-size: 60px;
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 10px;
+ }
+
+.title {
+    font-size: 2.5em;
+    color: #ff4b2b; 
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.para {
+    font-size: 1em; 
+    color: #550505; 
+    line-height: 1.6;
+    margin: 20px 0; 
+    text-align: justify; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    max-width: 800px; 
+    padding: 0 20px; 
+}
+
+.a {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #d9d7ed; 
+    text-decoration: line-through;
+    text-align: end;
+  }
+  
+ 
+  .a:hover {
+    color: #d14;
+    text-decoration: underline; 
+  }
+  
+
+  .a:visited {
+    color: purple; 
+  }
+  
+
+  .a:active {
+    color: #f00; 
+  }
+  
+
+  
+  .car {
+    font-size: 1.6em; 
+    font-weight: 600; 
+    color: black; 
+    margin-bottom: 10px; 
+    text-transform: uppercase; 
+    letter-spacing: 1.5px;
+    border-bottom: 3px solid #2980b9; 
+    padding-bottom: 5px;
+    transition: color 0.3s, border-bottom-color 0.3s;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+  }
+  
+  .car:hover {
+    color: #2980b9; 
+    border-bottom-color: #3498db;
+  }
+ 
+.bt {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #2980b9; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none; 
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .bt:hover {
+    background-color: #3498db; 
+    transform: translateY(-2px); 
+  }
+  
+
+  .bt:active {
+    background-color: #1c5d88; 
+    transform: translateY(0); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  }
+  
+  
+  .bt:focus {
+    outline: none; 
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.5); 
+  }
+  

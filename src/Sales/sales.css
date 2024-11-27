@@ -1,0 +1,37 @@
+.health-resources {
+    padding: 200px;
+    text-align: center;
+}
+
+.resources-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.resource-card {
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    width: 300px;
+}
+
+.resource-card:hover {
+    transform: scale(1.05);
+}
+
+.resource-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.resource-card h2 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+.resource-card a{
+  text-decoration: none;
+}

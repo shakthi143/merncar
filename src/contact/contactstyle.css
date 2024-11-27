@@ -1,0 +1,174 @@
+:root {
+    --secondary-color: white;
+    --text-color: white;
+    --text-color-2: white;
+    --overlay-color: white;
+}
+
+[data-theme="light"] {
+    --bg-color: #ffffff;
+    --primary-color: #ffffff;
+    --secondary-color: #000;
+    --text-color: white;
+    --text-color-2: white;
+    --overlay-color: rgb(255 255 255 / 70%);
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #000;
+}
+
+a,
+a:hover {
+    color: var(--text-color);
+}
+
+p {
+    word-break: break-word;
+    hyphens: auto;
+    color: #ffffff;
+}
+
+.ovhidden {
+    overflow: hidden;
+}
+
+.text_2,
+.text_2:hover {
+    color: var(--text-color-2);
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.cursor__dot div {
+    z-index: 999999 !important;
+}
+
+.cursor__dot div:last-child {
+    filter: invert(1);
+    background-color: var(--primary-color) !important;
+}
+
+.cursor__dot div:first-child {
+    filter: invert(1);
+    background-color: var(--overlay-color) !important; 
+}
+
+.color_pr {
+    color: var(--primary-color) !important;
+}
+
+.color_sec {
+
+    color: #ffffff;
+}
+
+.contact__form .form-control {
+    padding: 1.375rem .75rem;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: transparent;
+    border-radius: 0 !important;
+    border: 1px solid var(--secondary-color);
+}
+
+.contact__form input.form-control {
+    margin-bottom: 2em;
+    height: calc(2.5em + .75rem + 2px);
+}
+
+.loading-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    z-index: 999999999;
+    background: var(--text-color);
+    transform: translateX(100%);
+    animation: shift-rightwards 1s ease-in-out infinite;
+    animation-delay: .3s;
+}
+
+@keyframes shift-rightwards {
+    0% {
+        transform: translateX(-100%);
+    }
+    40% {
+        transform: translateX(0%);
+    }
+    60% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.btn {
+    color: black;
+    background-color: grey;
+    --secondary-color: white;
+}
+
+.des {
+    color: #ffffff;
+    text-decoration: double;
+}
+
+.cont {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: visible;
+    background-color: var(--bg-color);
+    background-repeat: no-repeat;
+    color: var(--text-color);
+  
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding-top: 60px;
+    border-left: 10px solid var(--primary-color);
+    border-right: 10px solid var(--primary-color);
+    background-image: url("https://wallpapercave.com/wp/wp7184500.jpg");
+    min-height: 100vh;
+    background-size: cover;
+}
+
+/* Notification styling */
+.notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(219, 37, 37);
+    color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    font-size: 1rem;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.notification.success {
+    background-color: #4caf50; 
+}
+
+.notification.error {
+    background-color: #f44336; 
+}
